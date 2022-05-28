@@ -19,7 +19,7 @@ const months = [
 ];
 const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 const s = true;
-function App() {
+function Calendar() {
 
   // memoria del mese attuale
   const [currm, addM] = useState(0);
