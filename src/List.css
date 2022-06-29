@@ -1,0 +1,54 @@
+ul {
+    background: white;
+    list-style-type: none;
+
+}
+ul li {
+    color: black;
+    background: rgb(240,240,240);
+    padding: 20px;
+    border-bottom: 1px rgb(30,30,30) solid;
+}
+
+ul li:hover {
+    background: rgb(0,50,140);
+    color: white;
+}
+
+.month {
+    background: rgb(240,240,240);
+    width: 300px;
+    height: 300px;
+}
+
+.day {
+    float: left;
+    padding: 2px;
+    background: white ;
+    border: 2px rgb(240,240,240) solid;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+    box-sizing: border-box;
+    color: rgb(30,30,30);
+    font-size: 8px;
+
+}
+.sun {
+  
+    color: red
+  
+}
+.day:hover {
+    background: rgb(0,50,140);
+    color: rgb(150,190,250);
+}
+.day span {
+    width: 100%;
+    display: block;
+    text-align: center;
+}

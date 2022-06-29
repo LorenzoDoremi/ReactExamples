@@ -72,4 +72,4 @@ function Day({ day, i }) {
   );
 }
 
-export default App;
+export default Calendar;
