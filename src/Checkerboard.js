@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./style/App.css";
 import List from "./List.js";
 import Calendar from "./Calendar.js";
 import { useState } from "react";
@@ -30,7 +30,7 @@ function Checker({ i }) {
     </div>
   );
 }
-function App() {
+function AppChecker() {
   const [loaded, setLoad] = useState(false);
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
@@ -52,4 +52,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppChecker;

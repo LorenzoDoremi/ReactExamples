@@ -1,0 +1,13 @@
+.opere_app {
+    background: rgb(20,20,20);
+    padding: 40px;
+}
+.item-container {
+    min-height: 40px;
+    min-width: 50%;
+    margin-top: 20px;
+    width: fit-content;
+    padding: 20px;
+    background: rgb(40,40,40);
+    color: white;
+}

@@ -1,4 +1,4 @@
-import "./List.css";
+import "./style/List.css";
 
 export default function List({ l, length }) {
   return (

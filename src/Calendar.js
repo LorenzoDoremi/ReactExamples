@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./style/App.css";
 import List from "./List.js";
 import { useState } from "react";
 import { useEffect } from "react";

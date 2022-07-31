@@ -1,0 +1,23 @@
+
+#navigation {
+    width: 100%;
+    background: black;
+    
+  }
+ 
+#navigation a {
+  
+    text-decoration: none;
+    height: 100%;
+    background: black;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    
+
+  }
+  #navigation a:hover {
+    background: rgb(153, 8, 20);
+  }
+  

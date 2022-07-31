@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import "./quiz.css";
+import "./style/quiz.css";
 function Quiz() {
   const [end, setEnd] = useState(false);
+
+  /* valori usati alla fine */
   const [results, updateResults] = useState({
     pigro: 0,
     metodico: 0,
@@ -10,18 +12,20 @@ function Quiz() {
    
   })
   
-
+  /* funzione passata ai figli per modificare in tempo reale le cose */
   function handleResults(t) {
     
-
+    // questo modifica solo i valori nell'array. React non è in grado di capire che l'array è cambiato (è sempre lo stesso array!)
     updateResults(t)
+
+    // questo serve a modificare lo stato, e far scattare il rerendering. 
     setEnd(!end)
 
   }
 
 
  
-
+  /* lista di domande utilizzate per creare i vari oggetti domanda */
   var domande = [
     { testo: "ti piace Python?", chiave: "pigro", subchiave: "dinamico" },
     { testo: "ti piace Java?", chiave: "metodico",  subchiave: "creativo" },
@@ -33,10 +37,11 @@ function Quiz() {
     { testo: "Preferisco cambiare framework in base al progetto", chiave: "dinamico",  subchiave: "pigro" },
 
   ];
-
-  function plot(end) {
-   
+  /* funzione che mostra i risultati. */
+  function plot() {
+     
       return (
+        <>
         <div id="results">
           <p>I RISULTATI!</p>
           <p style={{color: results.pigro > 0 ? "white": "black"}}><div style={{width: results.pigro > 0 ? results.pigro*50 : 0 }}/>PIGRO: {(results.pigro*10)}%</p>
@@ -45,19 +50,22 @@ function Quiz() {
           <p style={{color: results.dinamico > 0 ? "white": "black"}}><div style={{width: results.dinamico > 0 ? results.dinamico*50: 0 }}/>Dinamico: {(results.dinamico*10)}%</p>
          
         </div>
+       
+        </>
       );
    
   }
-
+  // per il bottone "invio". inutile se setEnd è anche sopra!
   function handleEnd() {
     setEnd(!end);
   }
 
+  // return della funzione quiz
   return (
     <>
     <div id="left">
       <div id="quiz"> <h1>Che programmatore sei? </h1></div>
-       {console.log("render!")}
+      {/* creo i vari elementi domanda, passando i valori che ho */}
       {domande.map((item, index) => {
         return (
           <Question
@@ -82,7 +90,7 @@ function Quiz() {
       </button>
       </div>
       <div id="right">
-      {plot(end)}
+      {plot()}
       </div>
       </>
    
